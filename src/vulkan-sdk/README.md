@@ -1,6 +1,13 @@
 # Vulkan SDK
 Feature for setting up the Vulkan Graphics engine SDK. See https://vulkan.lunarg.com/home/welcome for more information about Vulkan
 
+## Example Usage
+```json
+"features": {
+    "https://github.com/nikaiju/dev-collection/raw/refs/heads/main/features/devcontainer-feature-vulkan-sdk.tgz": {}
+}
+```
+
 ## Environment
 
 Only tested with a debian base image (bookworm) on a linux host machine (fedora 42 derivative)

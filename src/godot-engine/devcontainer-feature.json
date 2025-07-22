@@ -5,6 +5,6 @@
     "description": "Installs the Godot engine sdk. See ",
 
     "dependsOn": {
-        "./vulkan-sdk": {}
+        "https://github.com/nikaiju/dev-collection/raw/refs/heads/main/features/devcontainer-feature-vulkan-sdk.tgz": {}
     }
 }

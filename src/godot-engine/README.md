@@ -1,6 +1,13 @@
 # Godot Engine
 Installs the godot engine for game development. See https://godotengine.org
 
+## Example Usage
+```json
+"features": {
+    "https://github.com/nikaiju/dev-collection/raw/refs/heads/main/features/devcontainer-feature-godot-engine.tgz": {}
+}
+```
+
 ## Enviroment
 
 Only tested with a debian base image (bookworm) on a linux host machine (fedora 42 derivative)
@@ -8,7 +15,7 @@ Only tested with a debian base image (bookworm) on a linux host machine (fedora 
 ## Dependencies
 Vulkan is a requirement for Godot, I think. Anyway, I need it so this `dependsOn` my [vulkan-sdk feature](../vulkan-sdk/)
 
-## Setup
+## Additional Setup
 
 The following steps are required to view certain GUI applications. I'm not super familiar with all this but this lets me view the `vkcube` test.
 
