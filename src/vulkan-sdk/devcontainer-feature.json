@@ -1,0 +1,12 @@
+{
+    "name": "Vulkan SDK",
+    "id": "vulkan-sdk",
+    "version": "1.0.0-alpha",
+    "description": "Installs the vulkan graphics engine sdk. See https://vulkan.lunarg.com/home/welcome",
+
+    "containerEnv": {
+        "VULKAN_SDK": "",
+        "LD_LIBRARY_PATH": "",
+        "VK_ADD_LAYER_PATH": ""
+    }
+}

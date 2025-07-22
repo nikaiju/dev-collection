@@ -1,0 +1,10 @@
+{
+    "name": "Godot Engine",
+    "id": "godot-engine",
+    "version": "1.0.0-alpha",
+    "description": "Installs the Godot engine sdk. See ",
+
+    "dependsOn": {
+        "./vulkan-sdk": {}
+    }
+}
