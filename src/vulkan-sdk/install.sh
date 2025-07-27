@@ -37,19 +37,3 @@ tar xf "vulkansdk-linux-x86_64-$version.tar.xz" -C $install_target
 echo "Install dependencies"
 sudo apt-get update
 sudo apt-get -y install libxcb-xinput0 libxcb-xinerama0 libxcb-cursor-dev libvulkan-dev
-
-
-echo "Update environment variables"
-echo "
-VULKAN_SDK=$install_target/$version/x86_64
-PATH=\$VULKAN_SDK/bin:\$PATH
-LD_LIBRARY_PATH=\$VULKAN_SDK/lib\${LD_LIBRARY_PATH:+:\$LD_LIBRARY_PATH}
-VK_ADD_LAYER_PATH=\$VULKAN_SDK/share/vulkan/explicit_layer.d
-" >> /home/vscode/.profile
-
-echo "
-VULKAN_SDK=$install_target/$version/x86_64
-PATH=\$VULKAN_SDK/bin:\$PATH
-LD_LIBRARY_PATH=\$VULKAN_SDK/lib\${LD_LIBRARY_PATH:+:\$LD_LIBRARY_PATH}
-VK_ADD_LAYER_PATH=\$VULKAN_SDK/share/vulkan/explicit_layer.d
-" >> /home/vscode/.xsessionrc

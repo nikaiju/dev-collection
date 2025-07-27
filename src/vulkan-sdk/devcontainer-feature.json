@@ -5,8 +5,9 @@
     "description": "Installs the vulkan graphics engine sdk. See https://vulkan.lunarg.com/home/welcome",
 
     "containerEnv": {
-        "VULKAN_SDK": "",
-        "LD_LIBRARY_PATH": "",
-        "VK_ADD_LAYER_PATH": ""
+        "VULKAN_SDK": "/usr/share/vulkan/1.4.313.0/x86_64",
+        "PATH": "/usr/share/vulkan/1.4.313.0/x86_64/bin:${PATH}",
+        "LD_LIBRARY_PATH": "/usr/share/vulkan/1.4.313.0/x86_64/lib",
+        "VK_ADD_LAYER_PATH": "/usr/share/vulkan/1.4.313.0/x86_64/share/vulkan/explicit_layer.d"
     }
 }
