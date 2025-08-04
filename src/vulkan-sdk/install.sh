@@ -37,3 +37,10 @@ tar -xf "vulkansdk-linux-x86_64-$version.tar.xz" -C $install_target
 echo "Install dependencies"
 sudo apt-get update
 sudo apt-get -y install libxcb-xinput0 libxcb-xinerama0 libxcb-cursor-dev #libvulkan-dev
+
+VULKAN_SDK=/usr/share/vulkan/1.4.313.0/x86_64
+cp -r $VULKAN_SDK/include/vulkan/ /usr/local/include/
+cp -P $VULKAN_SDK/lib/libvulkan.so* /usr/local/lib/
+cp $VULKAN_SDK/lib/libVkLayer_*.so /usr/local/lib/
+mkdir -p /usr/local/share/vulkan/explicit_layer.d
+cp $VULKAN_SDK/share/vulkan/explicit_layer.d/VkLayer_*.json /usr/local/share/vulkan/explicit_layer.d
