@@ -31,9 +31,9 @@ mkdir $install_target
 
 
 echo "Unpacking SDK"
-tar xf "vulkansdk-linux-x86_64-$version.tar.xz" -C $install_target
+tar -xf "vulkansdk-linux-x86_64-$version.tar.xz" -C $install_target
 
 
 echo "Install dependencies"
 sudo apt-get update
-sudo apt-get -y install libxcb-xinput0 libxcb-xinerama0 libxcb-cursor-dev libvulkan-dev
+sudo apt-get -y install libxcb-xinput0 libxcb-xinerama0 libxcb-cursor-dev #libvulkan-dev
