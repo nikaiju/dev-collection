@@ -39,8 +39,7 @@ sudo apt-get update
 sudo apt-get -y install libxcb-xinput0 libxcb-xinerama0 libxcb-cursor-dev #libvulkan-dev
 
 VULKAN_SDK=/usr/share/vulkan/1.4.313.0/x86_64
-cp -r $VULKAN_SDK/include/vulkan/ /usr/local/include/
-cp -r $VULKAN_SDK/include/vk_video/ /usr/local/include/
+cp -r $VULKAN_SDK/include/* /usr/local/include/
 cp -P $VULKAN_SDK/lib/libvulkan.so* /usr/local/lib/
 cp $VULKAN_SDK/lib/libVkLayer_*.so /usr/local/lib/
 mkdir -p /usr/local/share/vulkan/explicit_layer.d
