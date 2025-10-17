@@ -1,0 +1,33 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+
+    "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {
+        "username": "dev",
+        "userUid": "1000",
+        "userGid": "1000",
+        "upgradePackages": "true"
+      },
+      "ghcr.io/guiyomh/features/just:0": {}
+    },
+
+    "remoteUser": "dev",
+
+    "containerEnv": {
+        "DISPLAY": "${env:DISPLAY}",
+    },
+
+    "runArgs": [
+        "--rm",
+        "--security-opt=label=disable",
+        "--device", "nvidia.com/gpu=all",
+    ],
+
+    "mounts": [
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+        "source=/home/nikaiju/.config/fish/,target=/home/dev/.config/fish/,type=bind,consistency=cached"
+    ]
+}
